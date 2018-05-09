@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+if [ ! `which $1` ]; then
+  additional_step_message "Vim does not exist. Installing..."
+  sudo apt-get install -y $1
+  success_message "Successfully installed $1"
+fi

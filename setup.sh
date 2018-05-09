@@ -3,11 +3,8 @@
 sudo apt-get update -y
 
 setup_vim () {
-  if [ ! `which vim` ]; then
-    additional_step_message "Vim does not exist. Installing..."
-    sudo apt-get install -y vim
-    success_message "Successfully installed vim"
-  fi
+  
+  check_and_install 'vim'
 
   echo 'set -o vi' >> ~/.bashrc
   echo 'export EDITOR=/usr/bin/vim' >> ~/.bashrc
