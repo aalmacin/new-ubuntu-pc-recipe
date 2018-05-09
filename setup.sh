@@ -32,6 +32,12 @@ setup_vim () {
   success_message "Successfully setup vim"
 }
 
+setup_bin () {
+  echo 'PATH="'$(pwd)/bin':$PATH"' >> ~/.bashrc
+}
+
+setup_bin
+
 setup_vim
 
 sudo apt-get install -y python3-pip
