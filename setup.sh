@@ -26,6 +26,14 @@ setup_pip () {
   pip3 install awscli
 }
 
+setup_colors() {
+  # export LSCOLORS=GxFxCxDxBxegedabagaced
+  # Chosed Darkside color scheme
+  echo "export CLICOLOR=1" >> ~/.bash_profile
+  echo "export PS1='\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;33m\]\h\[\033[00m\]\[\033[00m\]:\[\033[01;37m\]\w\[\033[00m\]\$ '" >> ~/.bash_profile
+}
+
 setup_bin
 setup_vim
 setup_pip
+setup_colors
